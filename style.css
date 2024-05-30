@@ -1,18 +1,18 @@
 body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
 }
 
 .header {
     background-color: #543310;
-    color: 74512D;
+    color: #74512D;
     text-align: center;
     padding: 1px;
 }
 
 .nav {
-    background-color:rgb(175, 143, 111);
+    background-color: rgb(175, 143, 111);
     overflow: hidden;
 }
 
@@ -30,12 +30,11 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 1rem;
-
+    padding: 1px;
 }
 
 .nav ul li a:hover {
-    background-color:#333;
+    background-color: #333;
 }
 
 .main-content {
@@ -46,7 +45,7 @@ body {
 .featured {
     flex: 3;
     padding: 20px;
-    position: relative; 
+    position: relative;
     background-color: #eee;
     margin-right: 20px;
 }
@@ -54,14 +53,14 @@ body {
 .featured img {
     width: 100%;
     height: auto;
-    position: static; 
+    position: static;
 }
 
 .sidebar {
     flex: 1;
     background-color: #f4f4f4;
     padding: 20px;
-    position:absolute;
+    position: absolute;
     right: 0;
     top: 150px;
     width: 200px;
@@ -76,9 +75,32 @@ body {
     width: 100%;
     bottom: 0;
 }
-.nav ul li a.sticky-link {
-    position: sticky; 
-    top: 0;
-    background-color: #444;
-}
 
+/* Small Devices */
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 10px;
+    }
+    .nav ul li a {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .sidebar {
+        display: none;
+        height: 50px;
+        width: 50px;
+        font-size: 5px;
+        right: 0;
+        top: 150px;
+    }
+    .featured {
+        margin-right: 0;
+        
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .featured img{
+        height:400px;
+    }
+}
